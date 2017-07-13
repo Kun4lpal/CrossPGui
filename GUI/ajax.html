@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Post Request Test</h1>
+
+<form id="form">
+     <input type="text" id="msg" value=""/>
+    </form>
+
+<button type="button" onclick="postRequest()">Send Data</button>
+
+<p id="demo"></p>
+ 
+<script>
+function postRequest() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  
+  var ans = document.getElementById("msg").value; 
+  
+  xhttp.open("POST", "http://localhost:8085", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(ans);
+}
+</script>
+
+</body>
+</html>

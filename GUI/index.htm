@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>GET request test</h1>
+
+<form id="form">
+     <input type="text" id="msg" value=""/>
+    </form>
+
+
+<div id="demo">
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+	  var serverResponse = this.responseText;
+      alert(serverResponse); // Shows "15"
+    }
+  };
+  var ans = document.getElementById("msg").value; 
+  var url = "http://localhost:8085/";
+  
+  xhttp.open("GET", url.concat(ans), true);
+  xhttp.send(null);
+  
+}
+
+</script>
+
+</body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h2>Cross Platform GUI:</h2>
+	<script src="myjs.js"></script>
+	<link rel="stylesheet" type="text/css" href="mycss.css">
+</head>
+
+<body>
+<ul>
+		<li><a href="linka.htm">Tab-A</a></li>
+		<li><a href="linkb.htm">Tab-B</a></li>
+		<li><a href="linkc.htm">Tab-C</a></li>
+</ul>
+
+<ull>
+   <li style="float:left"> <!--Container here-->
+   
+   <div id="MainContainer">
+			
+			<div id="demo1">
+			
+			<h1>|  GET Request:</h1>
+	<form id="form">
+     <input type="text" id="msg1" value=""/>
+    </form>
+
+<button type="button" onclick="getRequest()">Get Request</button> 
+</div> 
+<h1>|  Server Response:</h1> 
+<div id="content1"></div>
+
+<div id="whitespace"> <br> <br><br></div> 
+
+
+<div id="demo2">
+			
+			<h1>|  DELETE Request:</h1>
+	<form id="demo3">
+     <input type="text" id="msg3" value=""/>
+    </form>
+
+<button type="button" onclick="deleteRequest()">Delete Request</button> 
+</div> 
+<h1>|  Server Response:</h1> 
+<div id="content3" ></div> 
+
+
+
+ </div>
+   </li>
+   <li style="float:left"> 
+   <div id="toolbar">
+<h1>|  Post Request</h1>
+<form id="demo2">
+     <input type="text" id="msg2" value=""/>
+    </form>
+<button type="button" onclick="postRequest()">Send Data</button>
+
+<h1>|  Server Response:</h1>
+<div id="content2"></div>
+
+
+<div id="whitespace"> <br> <br><br></div> 
+
+
+<div id="demo4">
+			
+			<h1>|  PUT Request:</h1>
+	<form id="demo5">
+     <input type="text" id="msg4" value=""/>
+    </form>
+
+<button type="button" onclick="putRequest()">Put Request</button> 
+</div> 
+<h1>|  Server Response:</h1> 
+<div id="content4" ></div> 
+
+			</div>
+		
+	</div>
+   </li>
+</ull>
+</body>
